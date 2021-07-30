@@ -1,38 +1,66 @@
-.App {
-  text-align: center;
+html, body {
+    height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    padding-top: 3em;
+    background: url("/room-with-character.png") no-repeat, #dfd4f7;
+    background-size: 776px;
+    background-position: center bottom;
+    image-rendering: pixelated;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Hud {
+    display: flex;
+    position: absolute;
+    top: 2em;
+    left:2em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.HeartsGrid {
+    display: grid;
+    grid-template-columns: repeat(10, 40px);
+    margin-bottom: 1em;
+}
+.Heart {
+    width: 32px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    display: block;
 }
 
-.App-link {
-  color: #61dafb;
+.MagicBar {
+    margin-bottom: 1em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Sidebar {
+    position: fixed;
+    right: 0;
+    top:0;
+    bottom:0;
+    width: 10em;
+    padding: 1em;
+}
+
+.MinMaxButton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+}
+.MinMaxButton button {
+    cursor:pointer;
+    background: transparent;
+    border:0;
+    width: 3em;
+    height: 3em;
+    margin-left: 0.5em;
+    padding:0;
+}
+.MinMaxButton button svg {
+    display: block;
+    margin: 0 auto;
+}
+.MinMaxButton button svg path {
+    fill: #393232;
 }
