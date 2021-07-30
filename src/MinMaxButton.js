@@ -1,10 +1,9 @@
 import React from 'react'
 
-export default function ({ label, increment, value, maxValue, minValue=0, onNewValue, renderIcon }) {
+export default function MinMaxButton ({ value, maxValue, minValue=0, increment, onNewValue, }) {
 
   return (
     <div className={"MinMaxButton"}>
-      {renderIcon()}
       <span>
         <button onClick={() => {
           const newValue = value - increment;

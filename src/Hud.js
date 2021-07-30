@@ -19,9 +19,9 @@ export default class Hud extends React.Component {
             value={this.state.hearts}
             maxValue={this.state.maxHearts}
             increment={0.5}
-            onNewValue={(newValue) => {
+            // onNewValue={(newValue) => {
               //TODO
-            }}
+            // }}
           />
         </aside>
       </div>

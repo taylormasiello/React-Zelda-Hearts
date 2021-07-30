@@ -4,7 +4,7 @@ html, body {
 
 body {
     padding-top: 3em;
-    background: url("/room-with-character.png") no-repeat, #dfd4f7;
+    background: url(/src/room-with-character.png) no-repeat, #dfd4f7;
     background-size: 776px;
     background-position: center bottom;
     image-rendering: pixelated;
