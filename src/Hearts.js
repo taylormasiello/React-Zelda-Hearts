@@ -1,27 +1,28 @@
 import React from 'react';
 import {Heart} from './icons';
 
-export default function({hearts, maxHearts}) {
+// Array(maxHearts).fill() - creates a new array with this many members to it, all will start undefined, .fill() parameters is starting value
+// .map((_, index)) - We don't need the empty value that comes first in map, which is normally whatever the value of the thing is; we're just interested in the index of which one we're on right now
 
-  //Create an array of Heart icons out of the `maxHearts` count
-  const heartElements = Array(maxHearts).fill().map(( h, index) => {
-
-    //Determine how full this individual heart is
+export default function Hearts({ hearts, maxHearts}) {
+  
+  const heartIcons = Array(maxHearts).fill().map((_, index) => {
+    
     let fill = 0;
     if (hearts >= index+1) {
       fill = 1;
     } else if (index+1 - hearts === 0.5) {
-      fill = 0.5
+      fill = 0.5;
     }
-
+    
     return (
-      <Heart key={index} fill={fill} />
+      <Heart key={index} fill={fill}/>
     )
-  });
+  })
 
   return (
     <div className={"HeartsGrid"}>
-      {heartElements}
+      {heartIcons}
     </div>
   )
 }

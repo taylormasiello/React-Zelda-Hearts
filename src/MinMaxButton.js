@@ -5,13 +5,13 @@ export default function MinMaxButton ({ value, maxValue, minValue=0, increment, 
   return (
     <div className={"MinMaxButton"}>
       <span>
-        <button onClick={() => {
+        <button className="minus" onClick={() => {
           const newValue = value - increment;
           onNewValue( newValue < minValue ? minValue : newValue )
         }}>
           {MinusIcon}
         </button>
-        <button onClick={() => {
+        <button className="plus" onClick={() => {
           const newValue = value + increment;
           onNewValue(newValue > maxValue ? maxValue : newValue)
         }}>
