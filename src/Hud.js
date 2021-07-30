@@ -1,5 +1,5 @@
 import React from 'react'
-import Hearts from './Hearts'
+// import Hearts from './Hearts'
 import MinMaxButton from './MinMaxButton'
 //import {Heart} from "./icons";
 
